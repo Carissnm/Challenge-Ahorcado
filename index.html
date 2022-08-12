@@ -29,9 +29,10 @@
                 <textarea name="mensaje" id="nueva-palabra" cols="60" rows="20" placeholder="Ingresá aquí la nueva palabra"></textarea>
                 <div class="botonera">
                     <p class="validacion">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM232 152C232 138.8 242.8 128 256 128s24 10.75 24 24v128c0 13.25-10.75 24-24 24S232 293.3 232 280V152zM256 400c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 385.9 273.4 400 256 400z" fill="white"/></svg><span class="texto-validacion">Ingresá sólo palabras en Mayúsculas.</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM232 152C232 138.8 242.8 128 256 128s24 10.75 24 24v128c0 13.25-10.75 24-24 24S232 293.3 232 280V152zM256 400c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 385.9 273.4 400 256 400z" fill="white"/></svg><span class="texto-validacion">Ingresá sólo palabras en Mayúsculas y sin acentos :) </span>
                     </p>
                     <div class="botones">
+                        <button class="btn-guardar-seguir">Guardar</button>
                         <button class="btn-guardar">Guardar y Empezar</button>
                         <button class="btn-cancelar">Cancelar</button>
                     </div>
@@ -40,7 +41,21 @@
         </section>
         <section class="juego-ahorcado escondido">
             <div class="contenedor-ahorcado">
-                <h2>Lugar donde va el ahorcado</h2>
+                <div class="ahorcado">
+                    <div class="dibujo-ahorcado">
+                        <div class="line-1 escondido ahorcado1"></div>
+                        <div class="line-2 escondido ahorcado1"></div>
+                        <div class="line-3 escondido ahorcado1"></div>
+                        <div class="head escondido ahorcado1"></div>
+                        <div class="arm-l escondido ahorcado1"></div>
+                        <div class="arm-r escondido ahorcado1"></div>
+                        <div class="body escondido ahorcado1"></div>
+                        <div class="leg-l escondido ahorcado1"></div>
+                        <div class="leg-r escondido ahorcado1"></div>
+                    </div>
+                        
+                    <div class="base"></div>
+                </div>
             </div>
             <div class="contenedor-letras">
                 <div class="inputs"></div>
@@ -49,10 +64,19 @@
             <div class="botones-ahorcado">
                 <button class="btn-nuevojuego">Nuevo Juego</button>
                 <button class="btn-volver">Volver al Inicio</button>
-                <button class="reset">Reset</button>
             </div>
         </section>
     </main>
+    <section class="modal escondido">
+        <div class='contenedor-modal popup'>
+            <p class='texto-modal'>Perdiste :(</p></br>
+            <p class='texto-modal'>¿Querés volver a intentarlo?</p> 
+            <div class='botonera-modal'>
+                <button class='cancelar-modal'>Cancelar</button>
+                <button class='continuar-modal'>Continuar</button>
+            </div>
+        </div>
+    </section>
     <footer>
         &copy; Ahorcado by Carolina Pettinaroli - All rights reserved - 2022
     </footer>

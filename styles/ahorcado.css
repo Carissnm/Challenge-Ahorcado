@@ -9,6 +9,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 0;
 }
 
 .contenedor-icono {
@@ -23,7 +24,7 @@ main {
 button {
     font-family: 'Pangolin', cursive;
     font-weight: 500;
-    border-radius: 4%;
+    border-radius: 7px;
     border: none;
     padding: 10px 12px;
 }
@@ -89,6 +90,16 @@ button {
     transform: scale(1.1) rotate(-2deg);
 }
 
+.btn-guardar-seguir {
+    background-color: rgb(0, 247, 123);
+    color: rgb(3, 78, 41);
+    transition: 0.5s;
+}
+.btn-guardar-seguir:hover {
+    transform: scale(1.1) rotate(2deg);
+    transition: 0.5s;
+}
+
 .btn-cancelar {
     background-color: orange;
     color: rgb(105, 44, 3);
@@ -136,6 +147,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 0;
 }
 
 .contenedor-ahorcado {
@@ -148,6 +160,7 @@ button {
 }
 
 .letra {
+    height: 50px;
     display: flex;
     justify-content: center;
 }
@@ -199,10 +212,7 @@ button {
 
 
 
-/* CLASE PARA ESCONDER SECCIONES */
-.escondido {
-    display: none;
-}
+
 
 /* SECCIÓN AGREGAR PALABRAS */
 textarea {
@@ -240,4 +250,182 @@ footer {
     font-family: 'Montserrat', sans-serif;
     padding: 15px;
     text-align: center;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(34, 31, 31, 0.301);
+}
+
+.modal-perder {
+    background-color: white;
+    border-radius: 7px;
+    padding: 15px;
+    height: 200px;
+    width: 30%; 
+    display: flex;
+}
+
+.contenedor-modal {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancelar-modal,
+.continuar-modal {
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cancelar-modal {
+    background-color: rgb(218, 33, 57);
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
+.continuar-modal {
+    background-color: rgb(9, 117, 117);
+    color: white;
+}
+
+.texto-modal {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+/* MUÑECO AHORCADO */
+
+.ahorcado {
+    width: 100%;
+    height: 55vh;
+    z-index: 10;
+}
+
+.line-1 {
+    position: absolute;
+width: 4.5px;
+height: 19rem;
+left: 550.67px;
+top: 5rem;
+background: white;
+  }
+
+.line-2 {
+    position: absolute;
+width: 177.75px;
+height: 4.5px;
+left: 550.67px;
+top: 5rem;
+
+background: white;
+border-radius: 8px;
+}
+
+.line-3 {
+    position: absolute;
+width: 4.5px;
+height: 49.5px;
+left: 725.92px;
+top: 5rem;
+
+background: white;
+border-radius: 8px;
+}
+
+.head {
+    position: absolute;
+width: 50px;
+height: 50px;
+left: 43.6em;
+top: 8rem;
+border-radius: 50%;
+border: 5px solid white;
+
+}
+
+.arm-l {
+    position: absolute;
+width: 4.5px;
+height: 72px;
+left: 705.75px;
+top: 11.4rem;
+background: white;
+border-radius: 8px;
+transform: rotate(30deg);
+
+}
+
+.arm-r {
+    position: absolute;
+width: 4.5px;
+height: 72px;
+left: 744.52px;
+top: 11.4rem;
+background: white;
+border-radius: 8px;
+transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
+}
+
+.body {
+    position: absolute;
+width: 4.5px;
+height: 85px;
+left: 725.52px;
+top: 11.7rem;
+background: white;
+
+}
+
+.leg-l {
+    position: absolute;
+width: 4.5px;
+height: 72px;
+left: 706.75px;
+top: 16.6rem;
+background: white;
+border-radius: 8px;
+transform: rotate(30deg);
+}
+
+.leg-r {
+    position: absolute;
+width: 4.5px;
+height: 72px;
+left: 743.52px;
+top: 16.6rem;
+background: white;
+border-radius: 8px;
+transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
+
+}
+
+.base {
+    position: absolute;
+    width: 370px;
+    height: 3px;
+    left: 480px;
+    top: 24rem;
+    background: white;
+    border-radius: 8px;
+}
+
+
+/* CLASE PARA ESCONDER SECCIONES */
+.escondido {
+    display: none;
 }

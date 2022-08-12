@@ -10,8 +10,9 @@ const seccionInicio = document.querySelector('.botonera-inicio');
 const seccionPalabrasNuevas = document.querySelector('.palabras-nuevas');
 const seccionAhorcado = document.querySelector('.juego-ahorcado');
 const textarea = document.querySelector('#nueva-palabra');
-const reset = document.querySelector('.reset');
-const letrasError = document.querySelector('.letra');
+const btnSeguirGuardando = document.querySelector('.btn-guardar-seguir');
+const modal = document.querySelector('.modal');
+const btnModalCancelar = document.querySelector('.cancelar-modal');
 
 
 
@@ -20,6 +21,7 @@ const letrasError = document.querySelector('.letra');
 let palabras = ['PARTIDO', 'PEREZOSO', 'APARATO', 'COMPUTOS', 'TALADRO', 'PELOTA', 'SASTRE', 'SERENO', 'POLIEDRO', 'TREX', 'LUNA', 'HIPOTECA', 'CELESTE', 'ATENCION', 'DESLIZ', 'HELADO', 'CARTAS', 'CEREZA', 'RUGBY', 'FIESTA', 'TRAQUEA', 'FUNCION', 'MARTILLO', 'MISTERIO', 'CAMION', 'CULO']
 
 let palabra = '';
+let intentos = 0;
 
 
 //EVENTOS
@@ -30,8 +32,8 @@ btnVolver.onclick = volverInicio;
 btnGuardarPalabra.onclick = guardarYEmpezar;
 btnCancelar.onclick = cancelar;
 btnNuevoJuego.onclick = jugarDeNuevo;
-
-
+btnSeguirGuardando.onclick = guardar;
+btnModalCancelar.onclick = mostrarOcultarMensajePerder;
 
 // FUNCIONES
 function iniciarJuego() {
@@ -48,16 +50,23 @@ function irSeccionAgregar() {
 function volverInicio() {
     seccionAhorcado.classList.add('escondido');
     seccionInicio.classList.remove('escondido');
-    resetearPalabra();    
+    resetearPalabra();
+    resetLetras();
+    resetearAhorcado();
+    
 }
 
 function guardarYEmpezar() {
     seccionPalabrasNuevas.classList.add('escondido');
     seccionAhorcado.classList.remove('escondido');
+    guardar();
+    sortearPalabra()
+}
+
+function guardar() {
     let palabraNueva = textarea.value;
     palabras.push(palabraNueva);
     limpiarTextarea();
-    sortearPalabra()
 }
 
 function cancelar() {
@@ -66,6 +75,7 @@ function cancelar() {
 }
 
 function jugarDeNuevo() {
+    resetearAhorcado();
     resetLetras();
     resetearPalabra();
     sortearPalabra();
@@ -78,7 +88,7 @@ function limpiarTextarea() {
 function sortearPalabra(){
     const letterboxes = document.querySelector('.inputs');
     let posicionAleatoria = Math.round(Math.random()*palabras.length)
-    palabra = palabras[posicionAleatoria];
+    let palabra = palabras[posicionAleatoria];
     for (let letra of palabra) {
         let box = document.createElement('div');
         box.className = 'contenedor-box'
@@ -92,9 +102,9 @@ function sortearPalabra(){
 
 function adivinarPalabra() {
     let listaLetrasEquivocadas = []
+    const letrasError = document.querySelector('.letra');
 
-
-    document.addEventListener('keypress', function(e) {
+    document.onkeypress = e => {
         const inputs = document.querySelectorAll('.box')
         const tecla = e.key;
         if(/[A-Z]/.test(tecla) && !/[\W_]/.test(tecla) && tecla !== 'Alt' && tecla !== 'CapsLock' && tecla !== 'Shift' && tecla !== 'Control') {
@@ -111,8 +121,9 @@ function adivinarPalabra() {
                         const letraError = document.createElement('p');
                         letraError.className = 'letra-error-parrafo';
                         letraError.textContent = tecla;
-        
                         letrasError.appendChild(letraError)
+                        intentos++;
+                        dibujarAhorcado(intentos);
                     }
                 }
                 
@@ -121,9 +132,42 @@ function adivinarPalabra() {
  
         }
         
-    });
+    };
     
 } 
+
+function dibujarAhorcado(intentos) {
+    switch(intentos) {
+        case 1 :
+            document.querySelector('.line-1').classList.remove('escondido');
+            break;
+        case 2 :
+            document.querySelector('.line-2').classList.remove('escondido');
+            break;
+        case 3 :
+            document.querySelector('.line-3').classList.remove('escondido');
+            break;
+        case 4 :
+            document.querySelector('.head').classList.remove('escondido');
+            break;
+        case 5 :
+            document.querySelector('.arm-l').classList.remove('escondido');
+            break;
+        case 6 :
+            document.querySelector('.arm-r').classList.remove('escondido');
+            break;
+        case 7 :
+            document.querySelector('.body').classList.remove('escondido');
+            break;
+        case 8 :
+            document.querySelector('.leg-l').classList.remove('escondido');
+            break;
+        case 9 :
+            document.querySelector('.leg-r').classList.remove('escondido');
+            mostrarOcultarMensajePerder();
+            break;
+    }
+}
 
 function resetearPalabra() {
     const letterboxes = document.querySelector('.inputs');
@@ -132,14 +176,30 @@ function resetearPalabra() {
         letterboxes.removeChild(letterboxes.lastChild)
     }
 }
-const resetLetras = () => {
+
+function resetLetras() {
+    const letrasError = document.querySelector('.letra');
     while(letrasError.firstChild) {
         letrasError.removeChild(letrasError.lastChild)
     }
-    console.log(letrasError)
 }
 
+function resetearAhorcado() {
+    const ahorcado = document.querySelectorAll('.ahorcado1');
+    ahorcado.forEach(item => {
+        if(!item.classList.contains('escondido')) {
+            item.classList.add('escondido')
+        }
+        intentos = 0;
+    })
+}
 
-
+function mostrarOcultarMensajePerder() {
+    if(!modal.classList.contains('escondido')){
+        modal.classList.add('escondido');
+    } else {
+        modal.classList.remove('escondido')
+    }
+}
 
 
