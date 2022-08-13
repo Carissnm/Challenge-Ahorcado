@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam:wght@300;400;700&family=Montserrat:wght@200;300;400;500;700&family=Mouse+Memoirs&family=Pangolin&family=Poppins:wght@300;400;700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 main {
     width: 100%;
     height: 100vh;
@@ -178,15 +191,14 @@ button {
 }
 .box {
     background: none;
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     margin: 0;
     background-color: none;
-    padding: 10px;
     font-family: 'Pangolin', cursive;
     color: transparent;
     text-align: center;
-    font-size: 41px;
+    font-size: 40px;
     user-select: none;
     border: none;
     border-bottom: 2px solid rgb(253, 253, 153);
@@ -250,56 +262,74 @@ footer {
     font-family: 'Montserrat', sans-serif;
     padding: 15px;
     text-align: center;
+    width: 100%;
 }
 
 /* MODAL */
-.modal {
+.modal-aviso,
+.modal,
+.modal-ganaste {  
     position: fixed;
-    height: 100vh;
     top: 0;
-    left: 0;    
-    width: 100%;
+    left: 0;  
+    height: 100vh;
+    width: 100%; 
     z-index: 30;
+    background-color: rgba(34, 31, 31, 0.301);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(34, 31, 31, 0.301);
 }
 
-.modal-perder {
+.popup {
+    animation: popup 0.17s;
+}
+
+    @keyframes popup {
+    0%{
+        transform: scale(0.4);
+    }
+    50%{
+        transform: scale(0.7);
+    }
+    100%{
+        transform: scale(1);
+    }
+    }
+
+.center {
     background-color: white;
-    border-radius: 7px;
-    padding: 15px;
-    height: 200px;
-    width: 30%; 
-    display: flex;
-}
-
-.contenedor-modal {
-    padding: 10px;
-    width: 100%;
+    width: 30%;
+    height: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 7px;
 }
+
 
 .cancelar-modal,
 .continuar-modal {
-    font-family: 'Montserrat', sans-serif;
-    margin: 10px;
     font-weight: bold;
+    margin-bottom: 0;
     margin-top: 20px;
 }
 
-.cancelar-modal {
-    background-color: rgb(218, 33, 57);
-    color: white;
-    transition: all 300ms ease-in-out;
+.inicio-modal,
+.volver-jugar-modal {
+    margin-top: 25px;
+    transition: 0.5s;
 }
 
+.cancelar-modal {
+    background-color: #da2139;
+    color: white;
+}
+
+.volver-jugar-modal,
 .continuar-modal {
-    background-color: rgb(9, 117, 117);
+    background-color: #0bb84d;
     color: white;
 }
 
@@ -308,6 +338,50 @@ footer {
     font-weight: bold;
     font-size: 1.5em;
 }
+
+.icono {
+    margin-bottom: 10px;
+}
+
+.icono svg {
+    width: 30px;
+    height: 30px;
+}
+
+.title,
+.description {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.description {
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* MODAL GANASTE */
+.inicio-modal {
+    background-color: #af06a1;
+    color: white;
+}
+
+.inicio-modal:hover {
+    transition: 0.5s;
+    transform: scale(1.1) rotate(-2deg);
+}
+
+.volver-jugar-modal:hover {
+    transition: 0.5s;
+    transform: scale(1.1) rotate(2deg);
+}
+
+
 /* MUÑECO AHORCADO */
 
 .ahorcado {
@@ -351,7 +425,7 @@ border-radius: 8px;
     position: absolute;
 width: 50px;
 height: 50px;
-left: 43.6em;
+left: 43.95em;
 top: 8rem;
 border-radius: 50%;
 border: 5px solid white;
@@ -363,7 +437,7 @@ border: 5px solid white;
 width: 4.5px;
 height: 72px;
 left: 705.75px;
-top: 11.4rem;
+top: 10.7rem;
 background: white;
 border-radius: 8px;
 transform: rotate(30deg);
@@ -375,7 +449,7 @@ transform: rotate(30deg);
 width: 4.5px;
 height: 72px;
 left: 744.52px;
-top: 11.4rem;
+top: 10.7rem;
 background: white;
 border-radius: 8px;
 transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
@@ -386,7 +460,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
 width: 4.5px;
 height: 85px;
 left: 725.52px;
-top: 11.7rem;
+top: 11rem;
 background: white;
 
 }
@@ -396,7 +470,7 @@ background: white;
 width: 4.5px;
 height: 72px;
 left: 706.75px;
-top: 16.6rem;
+top: 16rem;
 background: white;
 border-radius: 8px;
 transform: rotate(30deg);
@@ -407,7 +481,7 @@ transform: rotate(30deg);
 width: 4.5px;
 height: 72px;
 left: 743.52px;
-top: 16.6rem;
+top: 16rem;
 background: white;
 border-radius: 8px;
 transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
