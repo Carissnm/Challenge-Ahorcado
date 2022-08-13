@@ -20,6 +20,8 @@ const seccionAhorcado = document.querySelector('.juego-ahorcado');
 const modal = document.querySelector('.modal');
 const modalGanaste = document.querySelector('.modal-ganaste');
 const modalAviso = document.querySelector('.modal-aviso');
+const modalGuardado = document.querySelector('.modal-guardado-exitoso')
+const modalPalabra = document.querySelector('.modal-no-word');
 
 
 
@@ -99,16 +101,46 @@ function seguirJugandoModal() {
 }
 
 function guardarYEmpezar() {
+
+    if(textarea.value === '') {
+        toggleModalPalabra();
+        setTimeout(toggleModalPalabra, 2000);
+    } else if(/[a-z]/.test(textarea.value)){
+        toggleModalAviso();
+        setTimeout(toggleModalAviso, 2000);
+        limpiarTextarea();
+    } else {
+        toggleModalGuardado();
+        toggleModalGuardado();
+        setTimeout(esconder, 2000)
+        guardar();
+        sortearPalabra();
+    }
+    
+}
+
+function esconder() {
     seccionPalabrasNuevas.classList.add('escondido');
     seccionAhorcado.classList.remove('escondido');
-    guardar();
-    sortearPalabra()
 }
 
 function guardar() {
     let palabraNueva = textarea.value;
-    palabras.push(palabraNueva);
-    limpiarTextarea();
+    if(/[a-z]/.test(palabraNueva)){
+        toggleModalAviso();
+        setTimeout(toggleModalAviso, 2000);
+        limpiarTextarea();
+    } else {
+        if(palabraNueva != '') {
+            palabras.push(palabraNueva);
+            limpiarTextarea();
+            toggleModalGuardado();
+            setTimeout(toggleModalGuardado, 2000);
+        } else {
+            toggleModalPalabra();
+            setTimeout(toggleModalPalabra, 2000)
+        }
+    }
 }
 
 function cancelar() {
@@ -287,5 +319,34 @@ function toggleModalAviso() {
         modalAviso.classList.remove('escondido');
     } else {
         modalAviso.classList.add('escondido');
+    }
+}
+
+function toggleModalGuardado() {
+    const divModalGuardado = document.querySelector('.exito');
+    if(divModalGuardado.classList.contains('popup')){
+        divModalGuardado.classList.remove('popup');
+    } else {
+        divModalGuardado.classList.add('popup');
+    }
+
+    if(modalGuardado.classList.contains('escondido')) {
+        modalGuardado.classList.remove('escondido');
+    } else {
+        modalGuardado.classList.add('escondido');
+    }
+}
+
+function toggleModalPalabra() {
+    const divModalPalabra = document.querySelector('.no-word');
+    if(divModalPalabra.classList.contains('popup')){
+        divModalPalabra.classList.remove('popup');
+    } else {
+        divModalPalabra.classList.add('popup');
+    }
+    if(modalPalabra.classList.contains('escondido')) {
+        modalPalabra.classList.remove('escondido');
+    } else {
+        modalPalabra.classList.add('escondido');
     }
 }
