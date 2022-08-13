@@ -137,7 +137,6 @@ function sortearPalabra(){
         box.innerHTML = `<input data-id=${letra} class="box" type="text" disabled>`
         letterboxes.appendChild(box);
     }
-    ;
     console.log(palabraSecreta)
     adivinarPalabra();
 }

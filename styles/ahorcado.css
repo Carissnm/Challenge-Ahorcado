@@ -492,7 +492,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     position: absolute;
     width: 370px;
     height: 3px;
-    left: 480px;
+    left: 495px;
     top: 24rem;
     background: white;
     border-radius: 8px;
@@ -502,4 +502,222 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
 /* CLASE PARA ESCONDER SECCIONES */
 .escondido {
     display: none;
+}
+
+
+/* MEDIAQUERIES */
+
+/* CELULARES */
+
+@media only screen and (max-width: 680px) {
+
+
+    main {
+        height: 210vh;
+    }
+
+    .icono-alura path {
+        fill: #3A5244;
+    }
+
+    /* INICIO */
+    .botonera-inicio {
+        height: 100vh;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botonera-inicio h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .botones-inicio {
+        margin-top: 100px;
+        height: 20vh;
+        justify-content: center;
+    }
+    
+    .iniciar-juego {
+        width: 70%;
+        height: 40%;
+        font-size: 30px;
+    }
+
+    .agregar-palabra {
+        width: 60%;
+        height: 30%;
+        font-size: 25px;
+    }
+
+    .center {
+        width: 80%;
+    }
+
+    .botones-ahorcado {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .botones-ahorcado button {
+        width: 80%;
+    }
+
+    .contenedor-letras {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 30vh;
+    }
+    
+    .letra {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .inputs {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 20vh;
+        flex-wrap: wrap;
+      }
+    
+    .contenedor-box {
+        margin: 2px;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 40%;
+        align-items: end;
+      }
+    .box {
+        background: none;
+        width: 65px;
+        height: 65px;
+        margin: 0;
+        background-color: none;
+        font-family: 'Pangolin', cursive;
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        user-select: none;
+        border: none;
+        border-bottom: 2px solid rgb(253, 253, 153);
+    }
+
+    /* AHORCADO */
+
+    .ahorcado {
+        height: 100vh;
+    }
+    
+    .line-1 {
+    width: 4.5px;
+    height: 25rem;
+    left: 87px;
+    top: 20rem;
+    background: white;
+    }
+    
+    .line-2 {
+    width: 218px;
+    left: 87px;
+    top: 20rem;
+    }
+    
+    .line-3 {
+    left: 300px;
+    top: 20rem;
+    }
+    
+    .head {
+        position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 16.75em;
+    top: 23rem;
+    border-radius: 50%;
+    border: 5px solid white;
+    
+    }
+    
+    .arm-l {
+        position: absolute;
+    width: 4.5px;
+    height: 72px;
+    left: 278px;
+    top: 27rem;
+    background: white;
+    border-radius: 8px;
+    transform: rotate(30deg);
+    
+    }
+    
+    .arm-r {
+        position: absolute;
+    width: 4.5px;
+    height: 72px;
+    left: 320px;
+    top: 27rem;
+    background: white;
+    border-radius: 8px;
+    transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
+    }
+    
+    .body {
+        position: absolute;
+    width: 4.5px;
+    height: 150px;
+    left: 299px;
+    top: 27.2rem;
+    background: white;
+    
+    }
+    
+    .leg-l {
+        position: absolute;
+    width: 4.5px;
+    height: 72px;
+    left: 280px;
+    top: 36.2rem;
+    background: white;
+    border-radius: 8px;
+    transform: rotate(30deg);
+    }
+    
+    .leg-r {
+    width: 4.5px;
+    height: 72px;
+    left: 319px;
+    top: 36.2rem;
+    background: white;
+    border-radius: 8px;
+    transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
+    
+    }
+    
+    .base {
+        position: absolute;
+        width: 370px;
+        height: 3px;
+        left: 19px;
+        top: 45rem;
+        background: white;
+        border-radius: 8px;
+    }
+
+    /* AGREGAR PALABRA */
+
+    
+    
+    
+    .escondido {
+        display: none;
+    }
+    
 }
