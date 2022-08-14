@@ -218,7 +218,7 @@ button {
     color: transparent;
     text-align: center;
     font-size: 40px;
-    user-select: none;
+    /* user-select: none; */
     border: none;
     border-bottom: 2px solid rgb(253, 253, 153);
 }
