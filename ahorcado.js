@@ -50,6 +50,7 @@ btnContinuarModal.onclick = jugarYCerrarModal;
 function iniciarJuego() {
     seccionInicio.classList.add('escondido');
     seccionAhorcado.classList.remove('escondido');
+    toggleKeyBoardCelu();
     sortearPalabra();
     toggleModalAviso();
     setTimeout(toggleModalAviso, 3000);
@@ -60,6 +61,10 @@ function irSeccionAgregar() {
     seccionPalabrasNuevas.classList.remove('escondido');
     toggleModalAviso();
     setTimeout(toggleModalAviso, 3000);
+}
+
+function toggleKeyBoardCelu() {
+    seccionAhorcado.focus();
 }
 
 function volverInicio() {
@@ -82,6 +87,7 @@ function jugarYCerrarModal() {
     resetLetras();
     resetearPalabra();
     sortearPalabra();
+    toggleKeyBoardCelu();
 }
 
 function irInicio() {
@@ -98,6 +104,7 @@ function seguirJugandoModal() {
     resetearAhorcado();
     resetearPalabra();
     sortearPalabra();
+    toggleKeyBoardCelu();
 }
 
 function guardarYEmpezar() {
@@ -115,6 +122,7 @@ function guardarYEmpezar() {
         setTimeout(esconder, 2000)
         guardar();
         sortearPalabra();
+        toggleKeyBoardCelu();
     }
     
 }
@@ -169,7 +177,6 @@ function sortearPalabra(){
         box.innerHTML = `<input data-id=${letra} class="box" type="text" disabled>`
         letterboxes.appendChild(box);
     }
-    console.log(palabraSecreta)
     adivinarPalabra();
 }
 
