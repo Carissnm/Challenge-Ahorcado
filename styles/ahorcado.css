@@ -149,6 +149,16 @@ button {
     margin: 5px;
 }
 
+.input-secreto {
+    color: transparent;
+    background: none;
+    border: none;
+}
+
+.input-secreto:focus {
+    outline: none;
+}
+
 /* BOTONERA SECCIÓN AHORCADO */
 .btn-nuevojuego {
     background-color: rgb(6, 197, 245);
