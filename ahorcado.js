@@ -15,7 +15,6 @@ const textarea = document.querySelector('#nueva-palabra');
 const seccionInicio = document.querySelector('.botonera-inicio');
 const seccionPalabrasNuevas = document.querySelector('.palabras-nuevas');
 const seccionAhorcado = document.querySelector('.juego-ahorcado');
-const inputSecreto = document.querySelector('.input-secreto')
 
 const modal = document.querySelector('.modal');
 const modalGanaste = document.querySelector('.modal-ganaste');
@@ -50,7 +49,6 @@ btnContinuarModal.onclick = jugarYCerrarModal;
 function iniciarJuego() {
     seccionInicio.classList.add('escondido');
     seccionAhorcado.classList.remove('escondido');
-    toggleKeyBoardCelu();
     sortearPalabra();
     toggleModalAviso();
     setTimeout(toggleModalAviso, 3000);
@@ -63,9 +61,6 @@ function irSeccionAgregar() {
     setTimeout(toggleModalAviso, 3000);
 }
 
-function toggleKeyBoardCelu() {
-    inputSecreto.focus();
-}
 
 function volverInicio() {
     seccionAhorcado.classList.add('escondido');
@@ -104,7 +99,6 @@ function seguirJugandoModal() {
     resetearAhorcado();
     resetearPalabra();
     sortearPalabra();
-    toggleKeyBoardCelu();
 }
 
 function guardarYEmpezar() {
@@ -122,7 +116,6 @@ function guardarYEmpezar() {
         setTimeout(esconder, 2000)
         guardar();
         sortearPalabra();
-        toggleKeyBoardCelu();
     }
     
 }
