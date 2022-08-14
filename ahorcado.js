@@ -183,7 +183,7 @@ function adivinarPalabra() {
     document.onkeypress = e => {
         const inputs = document.querySelectorAll('.box')
         const tecla = e.key;
-        if(/[A-Z]/.test(tecla) && !/[\W_]/.test(tecla) && tecla !== 'Alt' && tecla !== 'CapsLock' && tecla !== 'Shift' && tecla !== 'Control') {
+        if(/[A-Z]/.test(tecla) && !/[\W_]/.test(tecla) && tecla !== 'Alt' && tecla !== 'CapsLock' && tecla !== 'Shift' && tecla !== 'Control' && tecla !== 'Enter') {
             
 
             inputs.forEach((data, i) => {
