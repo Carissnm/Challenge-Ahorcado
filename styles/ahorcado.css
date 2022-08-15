@@ -638,7 +638,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
         width: 100%;
         display: flex;
         flex-direction: column;
-        height: 25vh;
+        height: 27vh;
     }
     
     .letra {
@@ -651,7 +651,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
         width: 100%;
         display: flex;
         justify-content: center;
-        height: 15vh;
+        height: 19vh;
         flex-wrap: wrap;
     }
     
