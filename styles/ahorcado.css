@@ -376,8 +376,13 @@ footer {
 }
 
 .icono svg {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+.modal-guardado-exitoso .center .icono svg {
+    width: 60px;
+    height: 60px;
 }
 
 .title,
@@ -546,7 +551,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     margin: 5px;
 }
 
-.input-teclado {
+.letra-teclado {
     font-family: 'Pangolin', cursive;
     width: 42px;
     height: 42px;
@@ -554,13 +559,14 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     border-radius: 50%;
     border: none;
     background-color: white;
-    padding: 13.2px;
+    padding: 12px;
+    padding-left: 15px;
     margin: 2px;
     color: black;
     user-select: none;
 }
 
-.input-teclado:active {
+.letra-teclado:active {
     /* box-shadow: 2px 5px 10px pink; */
     transform: scale(1.1);
 }
@@ -718,7 +724,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     }
 
 
-    .input-teclado {
+    .letra-teclado {
         width: 50px;
         height: 50px;
         padding: 15.5px;
@@ -892,17 +898,12 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     }
 
 
-    .input-teclado {
+    .letra-teclado {
         width: 50px;
         height: 50px;
         padding: 15.5px;
         font-size: 23px;
         margin: 3px;
-    }
-
-    .input-teclado .menos-padding  {
-        padding: 5px;
-        background-color: red;
     }
 
     .botones-ahorcado {

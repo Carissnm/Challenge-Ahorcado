@@ -15,7 +15,7 @@ const textarea = document.querySelector('#nueva-palabra');
 const seccionInicio = document.querySelector('.botonera-inicio');
 const seccionPalabrasNuevas = document.querySelector('.palabras-nuevas');
 const seccionAhorcado = document.querySelector('.juego-ahorcado');
-const teclas = document.querySelectorAll('.input-teclado')
+const teclas = document.querySelectorAll('.letra-teclado')
 
 const modal = document.querySelector('.modal');
 const modalGanaste = document.querySelector('.modal-ganaste');
@@ -181,15 +181,13 @@ function adivinarPalabra() {
     let contador = 0;
     let palabra = [];
 
-    document.onkeypress = e => {
-        const inputs = document.querySelectorAll('.box')
-        const tecla = e.key;
-        if(/[A-Z]/.test(tecla) && !/[\W_]/.test(tecla) && tecla !== 'Alt' && tecla !== 'CapsLock' && tecla !== 'Shift' && tecla !== 'Control' && tecla !== 'Enter') {
-            
-
+    teclas.forEach(item => {
+        item.onclick = e => {
+            letraSeleccionada = e.target.textContent;
+            const inputs = document.querySelectorAll('.box');
             inputs.forEach((data, i) => {
-                if(tecla === data.getAttribute('data-id')) {
-                    data.value = tecla;
+                if(letraSeleccionada === data.getAttribute('data-id')) {
+                    data.value = letraSeleccionada;
                     data.className = 'letra-visible box';
 
                     palabra[i] = data.value
@@ -197,28 +195,21 @@ function adivinarPalabra() {
                             setTimeout(toggleModalGanaste, 300)
                     }
                 } else {
-                    if(!listaLetrasEquivocadas.includes(tecla) && !palabraSecreta.includes(tecla)){
-                        listaLetrasEquivocadas.push(tecla)
+                    if(!listaLetrasEquivocadas.includes(letraSeleccionada) && !palabraSecreta.includes(letraSeleccionada)){
+                        listaLetrasEquivocadas.push(letraSeleccionada)
                         const letraError = document.createElement('p');
                         letraError.className = 'letra-error-parrafo';
-                        letraError.textContent = tecla;
+                        letraError.textContent = letraSeleccionada;
                         letrasError.appendChild(letraError)
                         intentos++;
                         dibujarAhorcado(intentos);
                     }
                 }
                 
-            });
-            
- 
+            })
         }
-        
-    };
-    
-    
-    if(contador === inputs.length) {
-        modalGanaste.classList.remove('escondido');
-    }
+    })
+
 } 
 
 function dibujarAhorcado(intentos) {
