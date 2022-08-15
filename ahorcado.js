@@ -15,6 +15,7 @@ const textarea = document.querySelector('#nueva-palabra');
 const seccionInicio = document.querySelector('.botonera-inicio');
 const seccionPalabrasNuevas = document.querySelector('.palabras-nuevas');
 const seccionAhorcado = document.querySelector('.juego-ahorcado');
+const teclas = document.querySelectorAll('.input-teclado')
 
 const modal = document.querySelector('.modal');
 const modalGanaste = document.querySelector('.modal-ganaste');

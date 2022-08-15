@@ -15,7 +15,7 @@ body {
 
 main {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-image: url(../img/pizarron5.jpg);
     background-position: center;
     background-size: cover;
@@ -193,6 +193,7 @@ button {
 
 .contenedor-ahorcado {
     width: 60%;
+    height: 280px;
 }
 .contenedor-letras {
     width: 100%;
@@ -426,7 +427,7 @@ footer {
 width: 4.5px;
 height: 19rem;
 left: 550.67px;
-top: 5rem;
+top: 3rem;
 background: white;
   }
 
@@ -435,7 +436,7 @@ background: white;
 width: 177.75px;
 height: 4.5px;
 left: 550.67px;
-top: 5rem;
+top: 3rem;
 
 background: white;
 border-radius: 8px;
@@ -446,7 +447,7 @@ border-radius: 8px;
 width: 4.5px;
 height: 49.5px;
 left: 725.92px;
-top: 5rem;
+top: 3rem;
 
 background: white;
 border-radius: 8px;
@@ -457,7 +458,7 @@ border-radius: 8px;
 width: 50px;
 height: 50px;
 left: 43.95em;
-top: 8rem;
+top: 6rem;
 border-radius: 50%;
 border: 5px solid white;
 
@@ -468,7 +469,7 @@ border: 5px solid white;
 width: 4.5px;
 height: 72px;
 left: 705.75px;
-top: 10.7rem;
+top: 8.7rem;
 background: white;
 border-radius: 8px;
 transform: rotate(30deg);
@@ -480,7 +481,7 @@ transform: rotate(30deg);
 width: 4.5px;
 height: 72px;
 left: 744.52px;
-top: 10.7rem;
+top: 8.7rem;
 background: white;
 border-radius: 8px;
 transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
@@ -491,7 +492,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
 width: 4.5px;
 height: 85px;
 left: 725.52px;
-top: 11rem;
+top: 9rem;
 background: white;
 
 }
@@ -501,7 +502,7 @@ background: white;
 width: 4.5px;
 height: 72px;
 left: 706.75px;
-top: 16rem;
+top: 14rem;
 background: white;
 border-radius: 8px;
 transform: rotate(30deg);
@@ -512,7 +513,7 @@ transform: rotate(30deg);
 width: 4.5px;
 height: 72px;
 left: 743.52px;
-top: 16rem;
+top: 14rem;
 background: white;
 border-radius: 8px;
 transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
@@ -524,7 +525,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 370px;
     height: 5px;
     left: 495px;
-    top: 24rem;
+    top: 22rem;
     background: white;
     border-radius: 8px;
 }
@@ -535,6 +536,34 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     display: none;
 }
 
+/* TECLADO */
+.teclado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 5px;
+}
+
+.input-teclado {
+    font-family: 'Pangolin', cursive;
+    width: 42px;
+    height: 42px;
+    font-size: 21px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    padding: 13.2px;
+    margin: 2px;
+    color: black;
+    user-select: none;
+}
+
+.input-teclado:active {
+    /* box-shadow: 2px 5px 10px pink; */
+    transform: scale(1.1);
+}
 
 /* MEDIAQUERIES */
 
@@ -678,6 +707,23 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
         width: 100%;
         height: 50%;
         margin: 10px;
+    }
+
+    .contenedor-ahorcado {
+        height: 650px;
+    }
+
+    .teclado {
+        margin-bottom: 20px;
+    }
+
+
+    .input-teclado {
+        width: 50px;
+        height: 50px;
+        padding: 15.5px;
+        font-size: 23px;
+        margin: 3px;
     }
 
     /* AHORCADO */
@@ -841,6 +887,24 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
         width: 80%;
     }
 
+    .contenedor-ahorcado {
+        height: 1000px;
+    }
+
+
+    .input-teclado {
+        width: 50px;
+        height: 50px;
+        padding: 15.5px;
+        font-size: 23px;
+        margin: 3px;
+    }
+
+    .input-teclado .menos-padding  {
+        padding: 5px;
+        background-color: red;
+    }
+
     .botones-ahorcado {
         flex-direction: column;
         align-items: center;
@@ -849,6 +913,8 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     .botones-ahorcado button {
         width: 80%;
     }
+
+    
 
     .contenedor-letras {
         width: 100%;
