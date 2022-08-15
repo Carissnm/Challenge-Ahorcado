@@ -560,7 +560,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     border: none;
     background-color: white;
     padding: 12px;
-    padding-left: 15px;
+    padding-left: 14.5px;
     margin: 2px;
     color: black;
     user-select: none;
@@ -720,7 +720,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     }
 
     .contenedor-ahorcado {
-        height: 570px;
+        height: 455px;
     }
 
     .teclado {
@@ -745,21 +745,21 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     
     .line-1 {
     width: 4.5px;
-    height: 25rem;
+    height: 21rem;
     left: 87px;
-    top: 15rem;
+    top: 12rem;
     background: white;
     }
     
     .line-2 {
     width: 218px;
     left: 87px;
-    top: 15rem;
+    top: 12rem;
     }
     
     .line-3 {
     left: 300px;
-    top: 15rem;
+    top: 12rem;
     }
     
     .head {
@@ -767,7 +767,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 70px;
     height: 70px;
     left: 16.75em;
-    top: 18rem;
+    top: 15rem;
     border-radius: 50%;
     border: 5px solid white;
     
@@ -778,7 +778,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 4.5px;
     height: 72px;
     left: 278px;
-    top: 22rem;
+    top: 19rem;
     background: white;
     border-radius: 8px;
     transform: rotate(30deg);
@@ -790,7 +790,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 4.5px;
     height: 72px;
     left: 320px;
-    top: 22rem;
+    top: 19rem;
     background: white;
     border-radius: 8px;
     transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
@@ -799,9 +799,9 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     .body {
         position: absolute;
     width: 4.5px;
-    height: 150px;
+    height: 110px;
     left: 299px;
-    top: 22.2rem;
+    top: 19.2rem;
     background: white;
     
     }
@@ -811,7 +811,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 4.5px;
     height: 72px;
     left: 280px;
-    top: 31.2rem;
+    top: 25.7rem;
     background: white;
     border-radius: 8px;
     transform: rotate(30deg);
@@ -820,8 +820,8 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     .leg-r {
     width: 4.5px;
     height: 72px;
-    left: 319px;
-    top: 31.2rem;
+    left: 318px;
+    top: 25.6rem;
     background: white;
     border-radius: 8px;
     transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
@@ -833,7 +833,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
         width: 320px;
         height: 3px;
         left: 19px;
-        top: 40rem;
+        top: 33rem;
         background: white;
         border-radius: 8px;
     }
@@ -899,7 +899,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     }
 
     .contenedor-ahorcado {
-        height: 1000px;
+        height: 500px;
     }
 
 
@@ -1029,30 +1029,29 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     
     .line-1 {
     width: 4.5px;
-    height: 35rem;
-    left: 87px;
-    top: 30rem;
+    height: 21rem;
+    left: 319px;
+    top: 12rem;
     background: white;
     }
     
     .line-2 {
-    width: 485px;
-    left: 87px;
-    top: 30rem;
+    width: 218px;
+    left: 319px;
+    top: 12rem;
     }
     
     .line-3 {
-    height: 125px;
-    left: 567px;
-    top: 30rem;
+    left: 33.25em;
+    top: 12rem;
     }
     
     .head {
         position: absolute;
-    width: 120px;
-    height: 120px;
-    left: 31.79em;
-    top: 37.5rem;
+    width: 70px;
+    height: 70px;
+    left: 31.25em;
+    top: 15rem;
     border-radius: 50%;
     border: 5px solid white;
     
@@ -1061,9 +1060,9 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     .arm-l {
         position: absolute;
     width: 4.5px;
-    height: 100px;
-    left: 33.5em;
-    top: 44.5rem;
+    height: 72px;
+    left: 514px;
+    top: 18.9rem;
     background: white;
     border-radius: 8px;
     transform: rotate(30deg);
@@ -1073,9 +1072,9 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     .arm-r {
         position: absolute;
     width: 4.5px;
-    height: 100px;
-    left: 37.1em;
-    top: 44.57rem;
+    height: 72px;
+    left: 551px;
+    top: 19rem;
     background: white;
     border-radius: 8px;
     transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
@@ -1084,9 +1083,9 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     .body {
         position: absolute;
     width: 4.5px;
-    height: 150px;
-    left: 35.3em;
-    top: 45rem;
+    height: 110px;
+    left: 532px;
+    top: 19.2rem;
     background: white;
     
     }
@@ -1094,9 +1093,9 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     .leg-l {
         position: absolute;
     width: 4.5px;
-    height: 120px;
-    left: 33.4em;
-    top: 53.8rem;
+    height: 72px;
+    left: 514px;
+    top: 25.6rem;
     background: white;
     border-radius: 8px;
     transform: rotate(30deg);
@@ -1104,9 +1103,9 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     
     .leg-r {
     width: 4.5px;
-    height: 120px;
-    left: 37.2em;
-    top: 53.8rem;
+    height: 72px;
+    left: 550px;
+    top: 25.6rem;
     background: white;
     border-radius: 8px;
     transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
@@ -1115,14 +1114,13 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     
     .base {
         position: absolute;
-        width: 500px;
-        height: 5px;
-        left: 4em;
-        top: 65rem;
+        width: 320px;
+        height: 3px;
+        left: 270px;
+        top: 33rem;
         background: white;
         border-radius: 8px;
     }
-
     /* AGREGAR PALABRA */
 
     
