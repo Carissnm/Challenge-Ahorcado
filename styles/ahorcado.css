@@ -638,7 +638,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
         width: 100%;
         display: flex;
         flex-direction: column;
-        height: 30vh;
+        height: 25vh;
     }
     
     .letra {
@@ -651,12 +651,12 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
         width: 100%;
         display: flex;
         justify-content: center;
-        height: 20vh;
+        height: 15vh;
         flex-wrap: wrap;
     }
     
     .contenedor-box {
-        margin: 2px;
+        margin: 1px;
         width: 20%;
         display: flex;
         justify-content: center;
@@ -716,11 +716,12 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     }
 
     .contenedor-ahorcado {
-        height: 650px;
+        height: 570px;
     }
 
     .teclado {
         margin-bottom: 20px;
+        width: 100% ;
     }
 
 
@@ -742,19 +743,19 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 4.5px;
     height: 25rem;
     left: 87px;
-    top: 20rem;
+    top: 15rem;
     background: white;
     }
     
     .line-2 {
     width: 218px;
     left: 87px;
-    top: 20rem;
+    top: 15rem;
     }
     
     .line-3 {
     left: 300px;
-    top: 20rem;
+    top: 15rem;
     }
     
     .head {
@@ -762,7 +763,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 70px;
     height: 70px;
     left: 16.75em;
-    top: 23rem;
+    top: 18rem;
     border-radius: 50%;
     border: 5px solid white;
     
@@ -773,7 +774,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 4.5px;
     height: 72px;
     left: 278px;
-    top: 27rem;
+    top: 22rem;
     background: white;
     border-radius: 8px;
     transform: rotate(30deg);
@@ -785,7 +786,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 4.5px;
     height: 72px;
     left: 320px;
-    top: 27rem;
+    top: 22rem;
     background: white;
     border-radius: 8px;
     transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
@@ -796,7 +797,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 4.5px;
     height: 150px;
     left: 299px;
-    top: 27.2rem;
+    top: 25.2rem;
     background: white;
     
     }
@@ -806,7 +807,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 4.5px;
     height: 72px;
     left: 280px;
-    top: 36.2rem;
+    top: 31.2rem;
     background: white;
     border-radius: 8px;
     transform: rotate(30deg);
@@ -816,7 +817,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
     width: 4.5px;
     height: 72px;
     left: 319px;
-    top: 36.2rem;
+    top: 31.2rem;
     background: white;
     border-radius: 8px;
     transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
@@ -828,7 +829,7 @@ transform: matrix(-0.87, 0.5, 0.5, 0.87, 0, 0);
         width: 320px;
         height: 3px;
         left: 19px;
-        top: 45rem;
+        top: 40rem;
         background: white;
         border-radius: 8px;
     }

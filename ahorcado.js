@@ -83,7 +83,6 @@ function jugarYCerrarModal() {
     resetLetras();
     resetearPalabra();
     sortearPalabra();
-    toggleKeyBoardCelu();
 }
 
 function irInicio() {
